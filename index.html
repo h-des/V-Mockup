@@ -7,6 +7,7 @@
   <title>V-mockup</title>
   <meta name="description" content="Recreating page from PSD">
   <meta name="author" content="SitePoint">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 
@@ -14,14 +15,27 @@
 
 <body>
   <nav class="nav">
-
+    <img src="images/logo.svg" alt="company logo" class="logo-img">
+    <input type="checkbox" id="toggle" class="nav__checkbox" />
+    <label for="toggle" class="nav__hamburger"></label>
+    <div class="nav__list" id="navBar">
+      <a href="#" class="nav__item nav__item--active">home</a>
+      <a href="#" class="nav__item">about</a>
+      <a href="#" class="nav__item">work</a>
+      <a href="#" class="nav__item">process</a>
+      <a href="#" class="nav__item">services</a>
+      <a href="#" class="nav__item">testimonials</a>
+      <a href="#" class="nav__item">contact</a>
+    </div>
   </nav>
   <header class="header">
-    <h2 class="header__heading">We Design and Develop</h2>
-    <p class="header__text">We are a new design studio based in USA. We have over 
-        20 years of combined experience, and know a thing or two 
-        about designing websites and mobile apps.</p>
-    <a href="#" class="btn btn--primary">Contact us</a>
+    <div class="header__container">
+      <h2 class="header__heading">We Design and Develop</h2>
+      <p class="header__text">We are a new design studio based in USA. We have over 
+          20 years of combined experience, and know a thing or two 
+          about designing websites and mobile apps.</p>
+      <a href="#" class="btn btn--primary">Contact us</a>
+    </div>
   </header>
   <section class="section-about">
     about
@@ -38,10 +52,10 @@
   <section class="section-work-process">
     process
   </section>
-  <section class="section-categories">
+  <section class="section-services">
     categories
   </section>
-  <section class="section-opinions">
+  <section class="section-testimonials">
     opinions
   </section>
   <section class="section-customers">
@@ -53,6 +67,6 @@
   <footer class="footer">
     footer
   </footer>
-  <!-- <script src="js/scripts.js"></script> -->
+  <script src="index.js"></script>
 </body>
 </html>

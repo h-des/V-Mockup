@@ -31,8 +31,18 @@ body {
   font-family: $font-primary;
   font-weight: 400;
   display: grid;
+  position: relative;
   grid-template-columns: 
-    [full-start] minmax(1em, 1fr) 
-    [main-start] minmax(1140px, 1fr) [main-end]
-    minmax(1em, 1fr) [full-end];
+    [full-start] minmax(10px, 1fr) 
+    [main-start] minmax(1120px , 1fr) [main-end]
+    minmax(10px, 1fr) [full-end];
+}
+
+@media only screen and (max-width: 1140px) {
+  body {
+    grid-template-columns: 
+    [full-start] 10px 
+    [main-start] 1fr [main-end]
+    10px [full-end];
+  }
 }

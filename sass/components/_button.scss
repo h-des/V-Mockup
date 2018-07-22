@@ -6,8 +6,13 @@
     font-family: $font-primary;
     letter-spacing: 2px;
     font-weight: 500;
-    font-size: 1.6rem;
-    padding: 2.5rem 6rem;
+    font-size: 1.2rem;
+    padding: 2rem 4rem;
+    transition: .2s all;
+  }
+
+  &:hover {
+    background-color: $color-primary-dark;
   }
 
   &--primary {
