@@ -1,0 +1,16 @@
+.header {
+  background-image: url('./../images/header_bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  grid-column: full-start/full-end;
+
+  &__heading {
+
+  }
+
+  &__text {
+
+  }
+
+}

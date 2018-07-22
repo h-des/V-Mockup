@@ -1,0 +1,38 @@
+//COLORS
+
+$color-primary: #10C9C3;
+$color-primary-dark: #12ABA6;
+
+$color-grey-light-1: #F8F9F9;
+$color-grey-light-2: #E9E9E9;
+
+$color-grey-dark-1: #838383;
+$color-grey-dark-2: #141414;
+
+//FONTS
+$font-primary: 'Montserrat', sans-serif;
+$font-secondary: 'Arial', sans-serif;
+
+
+*, 
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $font-primary;
+  font-weight: 400;
+  display: grid;
+  grid-template-columns: 
+    [full-start] minmax(1em, 1fr) 
+    [main-start] minmax(1140px, 1fr) [main-end]
+    minmax(1em, 1fr) [full-end];
+}
