@@ -1,8 +1,91 @@
 .section-about {
   grid-column: full-start/full-end;
+  padding: 0 2rem;
+  margin: 9rem auto;
+  max-width: 60rem;
+  text-align: center;
+
+  .signature-img {
+    margin-top: 4rem;
+    max-height: 6rem;
+  }
 }
 
 .section-skills {
+  grid-column: full-start/full-end;
+  background-color: $color-grey-light-1;
+  display: grid;
+  grid-template-columns: 
+  [full-start] minmax(10px, 1fr) 
+  [main-start] repeat(8,  minmax(10px, 1fr) ) [main-end]
+  minmax(10px, 1fr) [full-end];
+
+  .skills {
+    grid-column: main-start / span 3;
+    margin: 15rem 0;
+    position: relative;
+
+    &__title {
+      color: white;
+      text-transform: uppercase;
+      font-family: $font-primary;
+      font-weight: 500;
+      font-size: 1.2rem;
+      color: $color-grey-dark-2;
+      
+      &::after {
+        padding-left: 1rem;
+        content: attr(data-size);
+      }
+    }
+
+
+    &__percentage-bar {
+      box-sizing: border-box;
+      display: inline-block;
+      height: 4px;
+      background-color: $color-grey-dark-1;
+      width: 100%;
+      margin: 2rem 0;
+
+      
+      &::after {
+        position: absolute;
+        content: '';
+        height: 4px;
+        background-color: $color-primary;
+       
+      }
+    }
+
+    .width-75 {
+      &::after {
+        width: 75%;
+      }
+    }
+    .width-90 {
+      &::after {
+        width: 90%;
+      }
+    }
+    .width-65 {
+      &::after {
+        width: 65%;
+      }
+    }
+
+
+  }
+
+  .skills-img {
+    background-image: url("../images/skills-img.jpg");
+    background-position: center;
+    background-size: cover;
+    grid-column: 6/ -1;
+  }
+}
+
+.section-stats {
   grid-column: full-start/full-end;
   background-color: $color-primary;
 }
@@ -11,7 +94,7 @@
   grid-column: full-start/full-end;
 }
 
-.section-process {
+.section-work-process {
   grid-column: full-start/full-end;
 }
 
