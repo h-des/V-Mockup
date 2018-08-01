@@ -29,6 +29,11 @@ html {
   font-size: 62.5%;
 }
 
+button {
+  outline: none;
+  border: none;
+}
+
 body {
   font-family: $font-primary;
   font-weight: 400;
