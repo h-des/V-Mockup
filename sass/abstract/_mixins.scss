@@ -1,0 +1,7 @@
+@mixin grid {
+  display: grid;
+  grid-template-columns: 
+  [full-start] minmax(10px, 1fr) 
+  [main-start] repeat(8,  minmax(10px, 1fr) ) [main-end]
+  minmax(10px, 1fr) [full-end];
+}
