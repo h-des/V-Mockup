@@ -5,20 +5,53 @@
   font-family: $font-secondary;
   font-size: 1.5rem;
   @include grid;
+
+  
   
   &__container {
     grid-column: main-start/ main-end;
     padding: 10rem 0;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+
+    @include breakpoint(laptop) {
+      grid-template-rows: repeat(2, min-content);
+      grid-row-gap: 2rem;
+    }
+
+    @include breakpoint(mobileonly) {
+      padding: 4rem 0;
+      grid-template-rows: repeat(3, min-content);
+    }
+
   }
   
   &__info {
     grid-column: 1/ span 3;
+    @include breakpoint(laptop) {
+      grid-column: 1/ span 6;
+      // justify-self: end;
+    }
+
+    @include breakpoint(mobileonly) { 
+      grid-column: 1/-1;
+      text-align: center;
+    }
   }
 
   &__contact {
     grid-column: 6/span 2;
+
+    @include breakpoint(laptop) {
+      grid-column: 7/ span 6;
+      // justify-self: end;
+    }
+
+    @include breakpoint(mobileonly) { 
+      grid-column: 1/ -1;
+      grid-row: 2;
+      text-align: center;
+    }    
   }
 
 
@@ -46,9 +79,18 @@
 
   &__links {
     grid-column: 9/ -1;
-   
     
+    @include breakpoint(laptop) {
+      grid-column: 1/-1;
+      grid-row: 2;
+    }
+
+    @include breakpoint(mobileonly) { 
+      grid-column: 1/-1;
+      grid-row: 3;
+    }    
   }
+  
 
   &__ul {
     display: flex;
@@ -56,12 +98,30 @@
     float: left;
     margin-right: 4rem;
 
+    @include breakpoint(mobileonly) {
+      float: none;
+      margin-right: 0;
+      * {
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+    }
+
+
     &:not(:last-child) {
 
     }
     
     &:last-child {
       float: right;
+
+      @include breakpoint(laptop) {
+        float: left;
+      }
+
+      @include breakpoint(mobileonly) {
+        float: none;
+      }
     }
   }
 

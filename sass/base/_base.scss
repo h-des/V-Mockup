@@ -27,6 +27,11 @@ $font-secondary: 'Arial', sans-serif;
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+
+  @include breakpoint(mobileonly) { 
+    font-size: 50%;
+  }
+
 }
 
 button {

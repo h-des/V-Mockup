@@ -1,6 +1,6 @@
 .header {
   background-image: url('./../images/header_bg.jpg');
-  background-position: center;
+  background-position: right;
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
@@ -20,6 +20,13 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    @include breakpoint(laptop) { 
+      padding: 0 5rem;
+      grid-column: 1/-1;
+      margin-top: 10rem;
+    }
+  
   }
 
   &__heading {
