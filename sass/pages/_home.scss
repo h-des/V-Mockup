@@ -241,6 +241,58 @@
 .section-testimonials {
   grid-column: full-start/full-end;
   background-color: $color-primary;
+  padding: 17rem 17rem 0 17rem;
+  @include grid;
+
+  .testimonial {
+    grid-column: main-start / main-end;
+    text-align: center;
+    margin-bottom: 10rem;
+
+    &__quote {
+      color: white;
+      font-size: 2.4rem;
+      font-weight: 500;
+      margin-bottom: 3rem;
+    }
+    
+    &__author {
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      color: white;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+  }
+  
+  .carousel-controls {
+    margin: 0 auto;
+    grid-column: main-start / main-end;
+    display: flex;
+    align-items: center;
+    width: 4rem;
+    justify-content: space-between;
+    margin-bottom: 10rem;
+  }
+
+  .carousel-label {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: #B0E8E6;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .carousel-input:checked + .carousel-label {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+  }
+
+  .carousel-input {
+    display: none;
+  }
 }
 
 .section-customers {
@@ -271,8 +323,13 @@
       font-family: $font-secondary;
       padding: 1.5rem 2rem;
       border: none;
+      border-radius: 3px;
       font-weight: 500; 
       color: $color-grey-dark-1;
+
+      &:active, &:focus {
+        outline: 2px solid $color-grey-dark-1;
+      }
     }
 
     &__btn {

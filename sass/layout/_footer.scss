@@ -1,4 +1,68 @@
 .footer {
   grid-column: full-start/full-end;
-  background-color: black;
+  background-color: #141414;
+  color: #bcbcbc;
+  font-family: $font-secondary;
+  font-size: 1.5rem;
+  @include grid;
+  
+  &__container {
+    grid-column: main-start/ main-end;
+    padding: 10rem 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  
+  &__info {
+    grid-column: 1/ span 3;
+  }
+
+  &__contact {
+    grid-column: 6/span 2;
+  }
+
+
+
+  &__heading {
+    color: white;
+    font-family: $font-primary;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+  }
+  
+  &__link, &__link:active, &__link:visited{
+    color: #bcbcbc;
+    font-family: $font-secondary;
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+
+  &__link {
+    &:hover {
+      color: white;
+    }
+  }
+
+  &__links {
+    grid-column: 9/ -1;
+   
+    
+  }
+
+  &__ul {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    margin-right: 4rem;
+
+    &:not(:last-child) {
+
+    }
+    
+    &:last-child {
+      float: right;
+    }
+  }
+
 }
