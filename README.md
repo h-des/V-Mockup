@@ -1,8 +1,8 @@
-# V-Mockup
+# V-layout
 
 A website recreated from a template from [freebiesbug.com](https://freebiesbug.com/psd-freebies/piroll-design-template-agencypersonal-portfolio/)
 
-Online demo - [here](https://vmockup.now.sh/)
+Online demo - [here](https://vlayout.now.sh/)
 
 
 `npm install` to install dependencies.

@@ -1,7 +1,7 @@
 {
-  "name": "v_mockup",
+  "name": "v_layout",
   "version": "1.0.0",
-  "description": "recreating a mockup",
+  "description": "recreating a layout",
   "main": "index.js",
   "scripts": { 
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/h-des/V-Mockup.git"
+    "url": "git+https://github.com/h-des/V-Layout.git"
   },
   "author": "H-DES",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/h-des/V-Mockup/issues"
+    "url": "https://github.com/h-des/V-Layout/issues"
   },
-  "homepage": "https://github.com/h-des/V-Mockup#readme",
+  "homepage": "https://github.com/h-des/V-Layout#readme",
   "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^9.0.1",
